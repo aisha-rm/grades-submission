@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/grades-stylesheet.css}" rel="stylesheet">
+    <title>Student Grades</title>
+</head>
+<body>
+    <div class="topnav">
+        <!--these anchor tags also make GET requests-->
+        <a th:href="@{/}">Form</a>
+        <a th:href="@{/grades}">Grades</a>
+    </div>
+
+    <div class="container">
+        <h1>Student Grades</h1>
+        <table border="solid" width=100%>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Score</th>
+            </tr>
+
+            <tr th:each="grade:${grades}">
+                <td th:text="*{grade.name}"></td>
+                <td th:text="*{grade.subject}"></td>
+                <td th:text="*{grade.score}"></td>
+                <td> <a role="button" class="update" th:href="@{/(id=${grade.id})}">Update</a></td>
+                <!-- the update button above makes a GET request to access the form on path "/", 
+                the parameter and value are in the bracket after the path, the value is the result of the variable expression
+                the parameter is sent to the handler method for that path so as to retrieve the correct data-->
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
