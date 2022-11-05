@@ -2,13 +2,18 @@ package com.tmt.gradessubmission.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.tmt.gradessubmission.Constants;
 import com.tmt.gradessubmission.Grade;
 import com.tmt.gradessubmission.repository.GradeRepository;
 
+@Component
 public class GradeService {
 
-    GradeRepository gradeRepo = new GradeRepository();
+    @Autowired      //injects the Repoclass bean instead of creating new object and avoiding tight coupling
+    GradeRepository gradeRepo;
     
      //return a grade by passing its index.  the method accesses the read operation in repo class
      //all methods in repo class are replicated

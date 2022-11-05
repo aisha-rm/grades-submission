@@ -2,6 +2,7 @@ package com.tmt.gradessubmission.controller;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,7 +16,8 @@ import com.tmt.gradessubmission.service.GradeService;
 @Controller
 public class FormController {
     
-    GradeService gradeService = new GradeService();  //to be able to access the data stored in the grade repo through service class
+    @Autowired
+    GradeService gradeService;  //to be able to access the data stored in the grade repo through service class
     
     @GetMapping("/")
     public String getForm(Model model, @RequestParam(required=false) String id){
