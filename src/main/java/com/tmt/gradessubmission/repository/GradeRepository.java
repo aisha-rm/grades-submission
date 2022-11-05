@@ -3,11 +3,11 @@ package com.tmt.gradessubmission.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.tmt.gradessubmission.Grade;
 
-@Component  //to turn class to a bean
+@Repository  //to turn class to a bean
 public class GradeRepository {
     
     //arrayList to store data f rom form
