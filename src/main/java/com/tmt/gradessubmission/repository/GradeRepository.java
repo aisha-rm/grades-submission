@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.tmt.gradessubmission.Grade;
+import com.tmt.gradessubmission.pojo.Grade;
 
 @Repository  //to turn class to a bean
 public class GradeRepository {

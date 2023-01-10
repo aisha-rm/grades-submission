@@ -1,4 +1,4 @@
-package com.tmt.gradessubmission;
+package com.tmt.gradessubmission.validation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

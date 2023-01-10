@@ -1,4 +1,4 @@
-package com.tmt.gradessubmission;
+package com.tmt.gradessubmission.validation;
 
 import java.util.Arrays;
 import java.util.List;

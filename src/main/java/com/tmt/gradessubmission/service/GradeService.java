@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tmt.gradessubmission.Constants;
-import com.tmt.gradessubmission.Grade;
+import com.tmt.gradessubmission.pojo.Grade;
 import com.tmt.gradessubmission.repository.GradeRepository;
 
 @Service

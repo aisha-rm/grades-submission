@@ -1,8 +1,10 @@
-package com.tmt.gradessubmission;
+package com.tmt.gradessubmission.pojo;
 
 import java.util.UUID;
 
 import javax.validation.constraints.NotBlank;
+
+import com.tmt.gradessubmission.validation.Score;
 
 public class Grade {
     @NotBlank(message="Name cannot be blank") //overwriting default message
