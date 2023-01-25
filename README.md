@@ -1,2 +1,5 @@
 # grades-submission
-grade submission form with backend logic for field validation and updating grades
+
+a simple web app where
+student grades can be
+entered, stored, and updated.
